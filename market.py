@@ -3,7 +3,7 @@ import requests
 import json
 from telebot import types
   #Привязка бота
-bot = telebot.TeleBot('1172511637:AAEECSvdpr2XSEiQTNK33ChT9_T5KG3b2Mk')
+bot = telebot.TeleBot('TOKEN')
 #Start
 @bot.message_handler(commands=['start'])
 def send_message(message):
