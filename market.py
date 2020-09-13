@@ -6,10 +6,10 @@ from telebot import types
 bot = telebot.TeleBot('1172511637:AAEECSvdpr2XSEiQTNK33ChT9_T5KG3b2Mk')
 #Start
 @bot.message_handler(commands=['start'])
-def send_welcome(message):
+def send_message(message):
         name = message.from_user.first_name
         print(name)
-        bot.reply_to(message, 'Привет,' + name + '!', parse_mode= "Markdown")
+        bot.send_message(message.chat.id, 'Привет,' + name + '!', parse_mode= "Markdown")
 
 #Кнопки
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
